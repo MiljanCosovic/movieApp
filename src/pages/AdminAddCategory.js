@@ -23,7 +23,7 @@ const AdminAddCategory = () => {
         e.preventDefault()
         Validate()
 
-        await axios.post("http://movieaplication-001-site1.atempurl.com/categories",{
+        await axios.post("http://cosovicanica-001-site1.btempurl.com/categories",{
             name
         }).then(n => navigate("/admin-categories"))
     }

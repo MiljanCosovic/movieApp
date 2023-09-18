@@ -6,13 +6,13 @@ const AdminCategories = () => {
   const [render, setRerender] = useState(false);
 
   const fetchCats = async () => {
-    const response = await axios.get("http://movieaplication-001-site1.atempurl.com/Categories");
+    const response = await axios.get("http://cosovicanica-001-site1.btempurl.com/Categories");
     setCats(response.data);
   };
 
   const removeHandler = async (id) => {
     if(window.confirm("Da li ste sigurni?")){
-        await axios.delete("http://movieaplication-001-site1.atempurl.com/Categories/" + id);
+        await axios.delete("http://cosovicanica-001-site1.btempurl.com/Categories/" + id);
         setRerender(true);
     }
   };

@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://movieaplication-001-site1.atempurl.com/categories");
+        const response = await axios.get("http://cosovicanica-001-site1.btempurl.com/categories");
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -36,7 +36,7 @@ const Home = () => {
     const fetchMoviesByCategoryId = async (categoryId) => {
       try {
         const response = await axios.get(
-          `http://movieaplication-001-site1.atempurl.com/Movies/list?Category=${categoryId}&RatingsAsc=false&Page=1&PageSize=6`
+          `http://cosovicanica-001-site1.btempurl.com/Movies/list?Category=${categoryId}&RatingsAsc=false&Page=1&PageSize=6`
         );
         setActive(0);
         setFilteredMovies(response.data.items);
@@ -70,7 +70,7 @@ const Home = () => {
             className={`top-movie ${active === index ? "active" : ""}`}
             onClick={() => activeHandler(index)}
           >
-            <div className="tm-inner" style={{background:"url('http://movieaplication-001-site1.atempurl.com/Images/${movie.cover"}}>
+            <div className="tm-inner" style={{background:"url('http://cosovicanica-001-site1.btempurl.com/Images/${movie.cover"}}>
               {active === index ? (
                 <h1>
                   {n.name} ( {n.avgRating} )

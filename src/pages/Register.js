@@ -29,7 +29,7 @@ const Register = () => {
     setError(null)
     Validate();
     try{
-    var res = await axios.post("http://movieaplication-001-site1.atempurl.com/Identity/register", {
+    var res = await axios.post("http://cosovicanica-001-site1.btempurl.com/Identity/register", {
       username,
       password: pass,
       email,

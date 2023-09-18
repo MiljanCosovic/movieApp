@@ -12,7 +12,7 @@ const WatchList = () => {
   const getRes = async () => {
     try {
       var response = await axios.get(
-        "http://movieaplication-001-site1.atempurl.com/watchlist/" + user.id
+        "http://cosovicanica-001-site1.btempurl.com/watchlist/" + user.id
       );
 
       setRes(response.data);
@@ -23,7 +23,7 @@ const WatchList = () => {
 
   const removeWatchlist = async (id) => {
     try {
-      await axios.delete("http://movieaplication-001-site1.atempurl.com/watchlist", {
+      await axios.delete("http://cosovicanica-001-site1.btempurl.com/watchlist", {
         data: {
           userId: user.id,
           movieId: id,
