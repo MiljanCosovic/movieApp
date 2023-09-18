@@ -29,7 +29,7 @@ const Login = () => {
     setError(null)
     Validate();
     try {
-      var res = await axios.post("http://miljancosovic-001-site1.ftempurl.com/Identity/login", {
+      var res = await axios.post("http://movieaplication-001-site1.atempurl.com/Identity/login", {
         username,
         password: pass,
       });

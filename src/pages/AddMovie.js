@@ -16,12 +16,12 @@ const AddMovie = () => {
   const [thumb, setThumb] = useState(null);
 
   const fetchCats = async () => {
-    const response = await axios.get("http://miljancosovic-001-site1.ftempurl.com/Categories");
+    const response = await axios.get("http://movieaplication-001-site1.atempurl.com/Categories");
     setCats(response.data);
   };
 
   const fetchdirs = async () => {
-    const response = await axios.get("http://miljancosovic-001-site1.ftempurl.com/MovieDirectors");
+    const response = await axios.get("http://movieaplication-001-site1.atempurl.com/MovieDirectors");
     setDirs(response.data);
   };
 
@@ -53,7 +53,7 @@ const AddMovie = () => {
 
       // console.log(body);
 
-      await axios.post("http://miljancosovic-001-site1.ftempurl.com/Movies", formData).then((n) => {
+      await axios.post("http://movieaplication-001-site1.atempurl.com/Movies", formData).then((n) => {
         navigate("/movies/" + n.data.id);
       });
     }

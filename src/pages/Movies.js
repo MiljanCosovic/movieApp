@@ -31,7 +31,7 @@ const Movies = () => {
       if (filter.ratingsAsc) query += `RatingsAsc=${filter.ratingsAsc}&`;
 
       const response = await axios.get(
-        "http://miljancosovic-001-site1.ftempurl.com/movies/list?" + query
+        "http://movieaplication-001-site1.atempurl.com/movies/list?" + query
       );
 
       setResult(response.data);
@@ -41,7 +41,7 @@ const Movies = () => {
   };
 
   const fetchCats = async () =>{
-    const response = await axios.get('http://miljancosovic-001-site1.ftempurl.com/Categories')
+    const response = await axios.get('http://movieaplication-001-site1.atempurl.com/Categories')
     setCats(response.data)
   }
 
@@ -103,7 +103,7 @@ const Movies = () => {
           result.items &&
           result.items.map((movie) => (
             <div onClick={() => navHandler(movie.id)} className="w-32 p-3 bg-light cursor-pointer text-dark" key={movie.id}>
-              <img className="img-fluid" src={`https://localhost:7210/Images/${movie.cover}`} height={'150px'}/>
+              <img className="img-fluid" src={`http://movieaplication-001-site1.atempurl.com/Images/${movie.cover}`} height={'150px'}/>
               <h3>{movie.name} <span className="text-muted">({movie.year})</span></h3>
               <h4>Ocena: {movie.avgRating}</h4>
               {/* Display other movie details */}

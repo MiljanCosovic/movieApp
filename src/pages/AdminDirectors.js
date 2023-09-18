@@ -27,7 +27,7 @@ const AdminDirectors = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     Validate()
-    await axios.post("http://miljancosovic-001-site1.ftempurl.com/MovieDirectors", {
+    await axios.post("http://movieaplication-001-site1.atempurl.com/MovieDirectors", {
       firstName: first,
       lastName: last,
     });
