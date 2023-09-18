@@ -31,7 +31,7 @@ const Movies = () => {
       if (filter.ratingsAsc) query += `RatingsAsc=${filter.ratingsAsc}&`;
 
       const response = await axios.get(
-        "https://localhost:7210/movies/list?" + query
+        "http://miljancosovic-001-site1.ftempurl.com/movies/list?" + query
       );
 
       setResult(response.data);
@@ -41,7 +41,7 @@ const Movies = () => {
   };
 
   const fetchCats = async () =>{
-    const response = await axios.get('https://localhost:7210/Categories')
+    const response = await axios.get('http://miljancosovic-001-site1.ftempurl.com/Categories')
     setCats(response.data)
   }
 

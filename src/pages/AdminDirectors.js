@@ -8,7 +8,7 @@ const AdminDirectors = () => {
   const [last, setLast] = useState(null);
 
   const fetchdirs = async () => {
-    const response = await axios.get("https://localhost:7210/MovieDirectors");
+    const response = await axios.get("http://miljancosovic-001-site1.ftempurl.com/MovieDirectors");
     setDirs(response.data);
   };
   const Validate = () => {
@@ -27,7 +27,7 @@ const AdminDirectors = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     Validate()
-    await axios.post("https://localhost:7210/MovieDirectors", {
+    await axios.post("http://miljancosovic-001-site1.ftempurl.com/MovieDirectors", {
       firstName: first,
       lastName: last,
     });

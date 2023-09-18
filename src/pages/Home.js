@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("https://localhost:7210/categories");
+        const response = await axios.get("http://miljancosovic-001-site1.ftempurl.com/categories");
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -36,7 +36,7 @@ const Home = () => {
     const fetchMoviesByCategoryId = async (categoryId) => {
       try {
         const response = await axios.get(
-          `https://localhost:7210/Movies/list?Category=${categoryId}&RatingsAsc=false&Page=1&PageSize=6`
+          `http://miljancosovic-001-site1.ftempurl.com/Movies/list?Category=${categoryId}&RatingsAsc=false&Page=1&PageSize=6`
         );
         setActive(0);
         setFilteredMovies(response.data.items);
@@ -70,7 +70,7 @@ const Home = () => {
             className={`top-movie ${active === index ? "active" : ""}`}
             onClick={() => activeHandler(index)}
           >
-            <div className="tm-inner" style={{background:"url('https://localhost:7210/Images/${movie.cover"}}>
+            <div className="tm-inner" style={{background:"url('http://miljancosovic-001-site1.ftempurl.com/Images/${movie.cover"}}>
               {active === index ? (
                 <h1>
                   {n.name} ( {n.avgRating} )

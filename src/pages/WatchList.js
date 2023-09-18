@@ -12,7 +12,7 @@ const WatchList = () => {
   const getRes = async () => {
     try {
       var response = await axios.get(
-        "https://localhost:7210/watchlist/" + user.id
+        "http://miljancosovic-001-site1.ftempurl.com/watchlist/" + user.id
       );
 
       setRes(response.data);
@@ -23,7 +23,7 @@ const WatchList = () => {
 
   const removeWatchlist = async (id) => {
     try {
-      await axios.delete("https://localhost:7210/watchlist", {
+      await axios.delete("http://miljancosovic-001-site1.ftempurl.com/watchlist", {
         data: {
           userId: user.id,
           movieId: id,

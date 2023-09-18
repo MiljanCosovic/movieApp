@@ -17,7 +17,7 @@ const MovieDetails = () => {
   const watchHandler = async () => {
     try {
       console.log(user);
-      await axios.post("https://localhost:7210/Movies/watch", {
+      await axios.post("http://miljancosovic-001-site1.ftempurl.com/Movies/watch", {
         userId: user.id,
         movieId: id,
       });
@@ -31,7 +31,7 @@ const MovieDetails = () => {
   useEffect(() => {
     const fetchMovie = async (id) => {
       try {
-        const res = await axios.get("https://localhost:7210/Movies/" + id);
+        const res = await axios.get("http://miljancosovic-001-site1.ftempurl.com/Movies/" + id);
         setMovie(res.data);
         console.log(res.data);
         setLoading(false);
@@ -48,7 +48,7 @@ const MovieDetails = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://localhost:7210/Ratings/" + id, {
+      const res = await axios.post("http://miljancosovic-001-site1.ftempurl.com/Ratings/" + id, {
         rating: rate,
         raterId: user.id,
       });
@@ -61,7 +61,7 @@ const MovieDetails = () => {
 
   const watchListHandler = async () => {
     try {
-      await axios.post("https://localhost:7210/watchlist", {
+      await axios.post("http://miljancosovic-001-site1.ftempurl.com/watchlist", {
         userId: user.id,
         movieId: id,
       });
@@ -84,7 +84,7 @@ const MovieDetails = () => {
             <div className="col-6">
               <img
                 className="img-fluid"
-                src={`https://localhost:7210/Images/${movie.cover}`}
+                src={`http://miljancosovic-001-site1.ftempurl.com/Images/${movie.cover}`}
               />
             </div>
             <div className="col-6 p-5">
